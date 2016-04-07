@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+<name>yarn.resourcemanager.hostname</name>
+<value>172.31.0.79</value>
+</property>
+<property>
+<name>yarn.nodemanager.aux-services</name>
+<value>mapreduce_shuffle</value>
+</property> 
+<property>
+<name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
+<value>org.apache.hadoop.mapred.ShuffleHandler</value>
+</property>
+<property>
+<description>The address of the scheduler interface.</description>
+<name>yarn.resourcemanager.scheduler.address</name>
+<value>${yarn.resourcemanager.hostname}:8030</value>
+</property>
+<property>
+<description>The address of the applications manager interface in the RM.</description>
+<name>yarn.resourcemanager.address</name>
+<value>${yarn.resourcemanager.hostname}:8032</value>
+</property>
+<property>
+<description>The http address of the RM web application.</description>
+<name>yarn.resourcemanager.webapp.address</name>
+<value>${yarn.resourcemanager.hostname}:8088</value>
+</property>
+<property>
+<name>yarn.resourcemanager.resource-tracker.address</name>
+<value>${yarn.resourcemanager.hostname}:8031</value>
+</property>
+<property>
+<description>The address of the RM admin interface.</description>
+<name>yarn.resourcemanager.admin.address</name>
+<value>${yarn.resourcemanager.hostname}:8033</value>
+</property>
+<property>
+<name>yarn.nodemanager.vmem-check-enabled</name>
+<value>false</value>
+<description>Whether virtual memory limits will be enforced for containers</description>
+</property>
+<property>
+<name>yarn.nodemanager.vmem-pmem-ratio</name>
+<value>1</value>
+<description>Ratio between virtual memory to physical memory when setting memory limits for containers</description>
+</property>
+</configuration>

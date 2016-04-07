@@ -1,0 +1,10 @@
+<configuration>
+<property>
+<name>hadoop.tmp.dir</name> 
+<value>/mnt/raid/tmp</value> 
+</property>
+<property>
+<name>fs.defaultFS</name> 
+<value>hdfs://172.31.1.121:8020</value> 
+</property>
+</configuration>

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Mounting EBS....\n"
+sudo mkfs -t ext4 /dev/xvdb
+sudo mkdir -p /mnt/raid
+sudo mount /dev/xvdb /mnt/raid
+sudo chown -R ec2-user /mnt
+echo "Mounting EBS completed\n"
